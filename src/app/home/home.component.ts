@@ -10,7 +10,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('bgh');
+    console.log('Home page');
   }
 
 }
