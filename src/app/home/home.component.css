@@ -108,7 +108,6 @@ p.link {
   width: 100%;
   padding: 10px 20px;
   box-sizing: border-box;
-  border: 1px solid black;
 }
 
 .right-bar-tab .sub-tab .s-logo-container {
@@ -174,4 +173,41 @@ p.link {
 .right-bar-tab .sub-tab .venue-time {
   padding: 1px 15px;
   float: left;
+}
+
+.right-bar-tab .sub-tab .add-calendar {
+  margin-top: 10px;
+  float: right;
+  cursor: pointer;
+}
+
+.right-bar-tab .sub-tab .message {
+  width: 100%;
+  margin: 2px 0px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: pink;
+  box-sizing: border-box;
+  text-align: justify;
+}
+
+.right-bar-tab .sub-tab .schedule-button {
+  width: 49.5%;
+  padding: 15px 20px;
+  border: 1px solid #63C5DA;
+  border-radius: 5px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.right-bar-tab .sub-tab .cancel {
+  background: white;
+  color: #63C5DA;
+  float: left;
+}
+
+.right-bar-tab .sub-tab .reschedule {
+  background: #63C5DA;
+  color: white;
+  float: right;
 }
