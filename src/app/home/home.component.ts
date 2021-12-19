@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppointmentTabComponent } from './appointment-tab/appointment-tab.component';
 
 @Component({
   selector: 'app-home',
@@ -7,13 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
    public tabs: any = [
-     {img: '../../assets/images/health-record-icon.png', title: 'COVID-19 RECORDS'},
-     {img: '../../assets/images/health-record-icon.png', title: 'PERSONAL HEALTH'},
-     {img: '../../assets/images/health-record-icon.png', title: 'APPOINTMENTS'},
-     {img: '../../assets/images/health-record-icon.png', title: 'PAYMENTS'},
-     {img: '../../assets/images/health-record-icon.png', title: 'MEDICATION REFILL'},
-     {img: '../../assets/images/health-record-icon.png', title: 'ADMISSIONS'}
+     {img: '../../assets/images/health-record.png', title: 'COVID-19 RECORDS'},
+     {img: '../../assets/images/health-record.png', title: 'PERSONAL HEALTH'},
+     {img: '../../assets/images/health-record.png', title: 'APPOINTMENTS'},
+     {img: '../../assets/images/health-record.png', title: 'PAYMENTS'},
+     {img: '../../assets/images/health-record.png', title: 'MEDICATION REFILL'},
+     {img: '../../assets/images/health-record.png', title: 'ADMISSIONS'}
    ];
+   public selectedTab: string = '';
 
   constructor() { }
 
@@ -23,6 +25,10 @@ export class HomeComponent implements OnInit {
 
   newAppointment() {
     console.log('Make new appointment');
+  }
+
+  selectTab(tabTitle) {
+    this.selectedTab = tabTitle;
   }
 
 }

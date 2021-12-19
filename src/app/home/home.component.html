@@ -8,60 +8,13 @@
         <p class="link">My Profile</p>
         <p class="link"> My Caregivers</p>
       </div>
-      <div class="tab" *ngFor="let tab of tabs">
-        <img src={{tab.img}}>
+      <div class="tab" *ngFor="let tab of tabs" (click)="selectTab(tab.title)">
+        <img src={{tab.img}} class="{{selectedTab == tab.title ? 'blue' : ''}}">
         <p>{{tab.title}}</p>
       </div>
     </div>
     <div class="right-bar">
-      <div class="right-bar-heading">
-        <span style="color:blue; font-weight:bold; margin-right:10px"> Appointments </span >
-        <span style="margin-right: 10px"> > </span >
-        <span> SXXXX890D </span >
-      </div>
-      <div class="right-bar-tab">
-        <div class="sub-tab clearfix">
-          <div class="s-logo-container">
-            <p class="s-logo">S</p>
-          </div>
-          <p class="title">SXXXX890D</p>
-          <div class="appointment-button" (click)="newAppointment()">
-            <span>MAKE NEW</span> <br>
-            <span>APPOINTMENT</span>
-          </div>
-        </div>
-        <div class="sub-tab flex clearfix">
-          <div class="appointment-type"> Upcoming </div>
-          <div class="appointment-type border"> Missing </div>
-          <div class="appointment-type"> Open </div>
-        </div>
-      </div>
-      <div class="right-bar-tab">
-        <div class="sub-tab clearfix">
-          <div class="date">
-            <span> MON </span> <br>
-            <span class="extra-bold"> 20 </span> <br>
-            <span> Dec </span> <br>
-            <span> 2021 </span>
-          </div>
-          <div class="venue-time">
-            <span> Yishun PolyClinic </span> <br>
-            <span class="blue-text">08:20 AM</span> <br>
-            <span class="bold">Dr Consult Review</span> <br>
-            <span>YIS LEVEL 4, CLINIC 4A, ROOM 16/19</span>
-          </div>
-          <div class="add-calendar">
-            <img src="../../assets/images/add-calendar.png" style="width: 45px">
-          </div>
-        </div>
-        <div class="sub-tab clearfix">
-          <p class="message"> All patients and visitors must wear mask as mandated by law when leaving home, and keeping them throughout their visit. Please observe the safe distancing measures we have put in place in the clinic. </p>
-        </div>
-        <div class="sub-tab clearfix">
-          <input class="schedule-button cancel" type="submit" value="CANCEL">
-          <input class="schedule-button reschedule" type="submit" value="RESCHEDULE">
-        </div>
-      </div>
+      <app-appointment-tab *ngIf="selectedTab == 'APPOINTMENTS'"></app-appointment-tab>
     </div>
   </div>
 </div>
