@@ -15,6 +15,10 @@
   float: left;
 }
 
+.logout-button-container {
+  float: left
+}
+
 input[type=submit].logout {
   width: 170px;
   height: 50px;
