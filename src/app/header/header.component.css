@@ -19,6 +19,10 @@
   float: left
 }
 
+img.logo-img {
+  width:150px;
+}
+
 input[type=submit].logout {
   width: 170px;
   height: 50px;
