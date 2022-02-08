@@ -43,7 +43,7 @@
 }
 
 .logout-button-container {
-  float: right;
+  float: left;
 }
 
 img.logo-img {
@@ -64,13 +64,29 @@ input[type=submit].logout {
 @media(min-width: 500px) {
   input[type=submit].logout {
     width: 170px;
-    margin: 30px 0px 0px 30px;
+    margin: 30px 0px 0px 80px;
   }
 }
 
 @media(max-width: 499px) {
-  input[type=submit].logout {
-    width: 100px;
-    margin: 30px 20px 0px 10px;
+  @media(min-width: 450px) {
+    input[type=submit].logout {
+      width: 170px;
+      margin: 30px 20px 0px 40px;
+    }
+  }
+   @media(max-width: 449px) {
+    @media(min-width: 400px) {
+      input[type=submit].logout {
+        width: 100px;
+        margin: 30px 20px 0px 40px;
+      }
+    }
+    @media(max-width: 399px) {
+      input[type=submit].logout {
+        width: 100px;
+        margin: 30px 20px 0px 20px;
+      }
+    }
   }
 }
