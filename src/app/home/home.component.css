@@ -33,9 +33,20 @@
 }
 
 .content {
-  width: 80%;
   padding: 10px 20px;
   margin: 150px auto;
+}
+
+@media(min-width: 1200px) {
+  .content {
+    width: 960px;
+  }
+}
+
+@media(max-width: 1199px) {
+  .content {
+    width: 80%;
+  }
 }
 
 .left-bar {
