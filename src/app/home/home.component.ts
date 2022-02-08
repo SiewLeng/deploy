@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     console.log('Home page');
+    this.selectTab('APPOINTMENTS');
   }
 
   newAppointment() {

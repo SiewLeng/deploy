@@ -33,7 +33,6 @@
 }
 
 .content {
-  padding: 10px 20px;
   margin: 150px auto;
 }
 
@@ -44,24 +43,54 @@
 }
 
 @media(max-width: 1199px) {
-  .content {
-    width: 80%;
+  @media(min-width: 1100px) {
+    .content {
+      width: 80%;
+    }
+  }
+  @media(max-width: 1099px) {
+    @media(min-width: 900px) {
+      .content {
+        width: 680px;
+      }
+    }
+    @media(max-width: 899px) {
+      .content {
+        width: 90%;
+      }
+    }
   }
 }
 
-.left-bar {
-  width: 200px;
-  box-shadow: -1px 0px 2px 2px #C8C8C8;
-  float: left;
-  box-sizing: border-box;
+@media(min-width: 1100px) {
+  .left-bar {
+    width: 200px;
+    box-shadow: -1px 0px 2px 2px #C8C8C8;
+    float: left;
+    box-sizing: border-box;
+  }
+
+  .right-bar {
+    width: calc(100% - 200px);
+    box-shadow: 1px 0px 2px 2px #C8C8C8;
+    box-sizing: border-box;
+    float: right;
+    background: #F8F8F8;
+  }
 }
 
-.right-bar {
-  width: calc(100% - 200px);
-  box-shadow: 1px 0px 2px 2px #C8C8C8;
-  box-sizing: border-box;
-  float: right;
-  background: #F8F8F8;
+@media(max-width: 1099px) {
+  .left-bar {
+    display: none;
+  }
+
+  .right-bar {
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: 1px 0px 2px 2px #C8C8C8;
+    box-sizing: border-box;
+    background: #F8F8F8;
+  }
 }
 
 .personal-info {
@@ -103,126 +132,3 @@ p.link {
 .tab img.blue {
   background: #00FFFF;
 }
-
-/*
-.right-bar-heading {
-  width: 100%;
-  padding: 25px 25px;
-}
-
-.right-bar-tab {
-  width: 90%;
-  margin: 10px auto;
-  padding: 10px 20px;
-  background: white;
-  box-sizing: border-box;
-}
-
-.right-bar-tab .sub-tab {
-  width: 100%;
-  padding: 10px 20px;
-  box-sizing: border-box;
-}
-
-.right-bar-tab .sub-tab .s-logo-container {
-  width: 30px;
-  height: 30px;
-  padding: 15px;
-  border-radius: 30px;
-  text-align: center;
-  float: left;
-  background: #63C5DA;
-}
-
-.right-bar-tab .sub-tab .s-logo-container .s-logo {
-  margin-top: 7px;
-  color: white;
-  font-weight:bold
-}
-
-.right-bar-tab .sub-tab .title {
-  margin-left: 20px;
-  margin-top: 20px;
-  font-weight: bold;
-  float: left
-}
-
-
-.right-bar-tab .sub-tab .appointment-button {
-  margin-top: 0px;
-  padding: 15px 30px;
-  border: 2px solid #63C5DA;
-  border-radius: 15px;
-  float: right;
-  color: #63C5DA;
-  font-weight: bold;
-  font-size: 14px;
-  background: white;
-  cursor: pointer;
-}
-
-.right-bar-tab .sub-tab .appointment-type {
-  width: 33%;
-  padding:10px 10px;
-  box-sizing: border-box;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.right-bar-tab .sub-tab .border {
-  border-left: 1px solid #C8C8C8;
-  border-right: 1px solid #C8C8C8
-}
-
-.right-bar-tab .sub-tab .date {
-  width: 50px;
-  padding: 1px 10px;
-  border-radius: 5px;
-  background: #63C5DA;
-  text-align: center;
-  float: left;
-}
-
-.right-bar-tab .sub-tab .venue-time {
-  padding: 1px 15px;
-  float: left;
-}
-
-.right-bar-tab .sub-tab .add-calendar {
-  margin-top: 10px;
-  float: right;
-  cursor: pointer;
-}
-
-.right-bar-tab .sub-tab .message {
-  width: 100%;
-  margin: 2px 0px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: pink;
-  box-sizing: border-box;
-  text-align: justify;
-}
-
-.right-bar-tab .sub-tab .schedule-button {
-  width: 49.5%;
-  padding: 15px 20px;
-  border: 1px solid #63C5DA;
-  border-radius: 5px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-
-.right-bar-tab .sub-tab .cancel {
-  background: white;
-  color: #63C5DA;
-  float: left;
-}
-
-.right-bar-tab .sub-tab .reschedule {
-  background: #63C5DA;
-  color: white;
-  float: right;
-}
-*/

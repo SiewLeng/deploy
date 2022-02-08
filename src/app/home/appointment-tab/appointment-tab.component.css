@@ -23,20 +23,20 @@
 
 .right-bar-heading {
   width: 100%;
-  padding: 25px 25px;
+  padding: 25px 5px;
 }
 
 .right-bar-tab {
-  width: 90%;
+  width: 94%;
   margin: 10px auto;
-  padding: 10px 20px;
+  padding: 10px 5px;
   background: white;
   box-sizing: border-box;
 }
 
 .right-bar-tab .sub-tab {
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 10px;
   box-sizing: border-box;
 }
 
