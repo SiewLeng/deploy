@@ -65,16 +65,28 @@
 
 
 .right-bar-tab .sub-tab .appointment-button {
-  margin-top: 0px;
   padding: 15px 30px;
   border: 2px solid #63C5DA;
   border-radius: 15px;
-  float: right;
   color: #63C5DA;
   font-weight: bold;
   font-size: 14px;
   background: white;
   cursor: pointer;
+}
+
+@media(min-width: 500px) {
+  .right-bar-tab .sub-tab .appointment-button {
+    width: 100px;
+    float: right;
+  }
+}
+
+@media(max-width: 499px) {
+  .right-bar-tab .sub-tab .appointment-button {
+    margin-top: 70px;
+    clear: left;
+  }
 }
 
 .right-bar-tab .sub-tab .appointment-type {
@@ -101,14 +113,27 @@
 }
 
 .right-bar-tab .sub-tab .venue-time {
+  width: calc(90% - 105px);
   padding: 1px 15px;
   float: left;
 }
 
-.right-bar-tab .sub-tab .add-calendar {
+.right-bar-tab .sub-tab img.add-calendar {
   margin-top: 10px;
-  float: right;
+  float: left;
   cursor: pointer;
+}
+
+@media(min-width: 550px) {
+  .right-bar-tab .sub-tab img.add-calendar {
+    width: 45px;
+  }
+}
+
+@media(max-width: 549px) {
+  .right-bar-tab .sub-tab img.add-calendar {
+    width: 10%;
+  }
 }
 
 .right-bar-tab .sub-tab .message {
@@ -119,6 +144,7 @@
   background: pink;
   box-sizing: border-box;
   text-align: justify;
+  font-size: 15px;
 }
 
 .right-bar-tab .sub-tab .schedule-button {
@@ -128,6 +154,7 @@
   border-radius: 5px;
   box-sizing: border-box;
   cursor: pointer;
+  font-size: 0.75em;
 }
 
 .right-bar-tab .sub-tab .cancel {
