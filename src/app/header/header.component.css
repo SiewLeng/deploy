@@ -14,9 +14,23 @@
   background-image: linear-gradient(45deg, white, grey);
 }
 
+@media(min-width: 1100px) {
+  img.open-left-menu-icon {
+    display: none;
+  }
+}
+
+@media(max-width: 1099px) {
+  img.open-left-menu-icon {
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 0px;
+    width: 40px
+  }
+}
+
 .header-content {
   margin: 15px auto;
-  border: 1px solid red;
 }
 
 @media(min-width: 1200px) {
@@ -39,8 +53,15 @@
       }
     }
     @media(max-width: 899px) {
-      .header-content {
-        width: 70%;
+      @media(min-width: 400px) {
+        .header-content {
+          width: 70%;
+        }
+      }
+      @media(max-width: 399px) {
+        .header-content {
+          width: 60%;
+        }
       }
     }
   }
