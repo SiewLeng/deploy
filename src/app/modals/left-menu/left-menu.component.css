@@ -1,0 +1,42 @@
+.left-menu-modal {
+  display: none;
+  position: absolute; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 250px; /* Width 250px */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: white; /* Fallback color */
+  border: 1px solid red;
+}
+
+.tab {
+  width: 100%;
+  height: 60px;
+  padding: 10px 20px;
+  box-shadow: 0px -2px 2px #C8C8C8;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tab p {
+  margin-top: 10px;
+  color: grey;
+  font-size: 13px;
+  float: left;
+}
+
+.tab img {
+  margin-right: 20px;
+  float: left;
+  width:30px;
+}
+
+.tab img.blue {
+  background: #00FFFF;
+}
+
+.tab p.blue {
+  color:  blue;
+}
