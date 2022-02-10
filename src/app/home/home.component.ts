@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { AppointmentTabComponent } from './appointment-tab/appointment-tab.component';
+import { LeftMenuComponent } from '../modals/left-menu/left-menu.component';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,12 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild('modal', {static: false}) modal: LeftMenuComponent;
+
   ngOnInit() {
     console.log('Home page');
     this.selectTab('APPOINTMENTS');
+    this.modal.open();
   }
 
   newAppointment() {
