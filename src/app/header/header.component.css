@@ -15,17 +15,18 @@
 }
 
 @media(min-width: 1100px) {
-  img.open-left-menu-icon {
+  img.left-menu-icon {
     display: none;
   }
 }
 
 @media(max-width: 1099px) {
-  img.open-left-menu-icon {
+  img.left-menu-icon {
     position: absolute;
     margin-top: 40px;
     margin-left: 0px;
-    width: 40px
+    width: 40px;
+    cursor: pointer;
   }
 }
 

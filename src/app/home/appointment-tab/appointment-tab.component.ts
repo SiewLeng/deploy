@@ -12,4 +12,8 @@ export class AppointmentTabComponent implements OnInit {
   ngOnInit() {
   }
 
+  newAppointment() {
+    console.log('Make new Appointment');
+  }
+
 }

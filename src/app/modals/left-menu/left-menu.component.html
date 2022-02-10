@@ -3,4 +3,7 @@
     <img src={{tab.img}} class="{{selectedTab == tab.title ? 'blue' : ''}}">
     <p  class="{{selectedTab == tab.title ? 'blue' : ''}}">{{tab.title}}</p>
   </div>
+  <div class="tab-logout" (click)="clickLogout()">
+    <p class="{{logout == true ? 'blue' : ''}}"> LOGOUT </p>
+  </div>
 </div>

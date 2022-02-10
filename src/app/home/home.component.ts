@@ -17,15 +17,15 @@ export class HomeComponent implements OnInit {
      {img: '../../assets/images/health-record.png', title: 'ADMISSIONS'}
    ];
    public selectedTab: string = '';
+   public isModalOpen: boolean = false;
 
   constructor() { }
 
-  @ViewChild('modal', {static: false}) modal: LeftMenuComponent;
+  @ViewChild('modal') modal: LeftMenuComponent;
 
   ngOnInit() {
     console.log('Home page');
     this.selectTab('APPOINTMENTS');
-    this.modal.open();
   }
 
   newAppointment() {
@@ -34,6 +34,25 @@ export class HomeComponent implements OnInit {
 
   selectTab(tabTitle) {
     this.selectedTab = tabTitle;
+  }
+
+  updateOpenModal(value: boolean) {
+    this.isModalOpen = value;
+    if (this.isModalOpen) {
+      this.modal.open();
+    } else {
+      this.modal.close();
+    }
+  }
+
+  updateIsModalOpenAndSelectedTab(value) {
+    this.isModalOpen = value.isModalOpen;
+    this.selectedTab = value.selectedTab;
+    if (this.isModalOpen) {
+      this.modal.open();
+    } else {
+      this.modal.close();
+    }
   }
 
 }

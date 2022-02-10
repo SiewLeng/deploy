@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-header [isModalOpen]="isModalOpen" (toggleOpenModalEvent)="updateOpenModal($event)"></app-header>
 <div class="content-wrapper">
   <div class="content clearfix">
     <div class="left-bar">
@@ -17,5 +17,5 @@
       <app-appointment-tab *ngIf="selectedTab == 'APPOINTMENTS'"></app-appointment-tab>
     </div>
   </div>
-  <app-left-menu #modal></app-left-menu>
+  <app-left-menu #modal [selectedTabFromHome]="selectedTab" (updateIsModalOpenAndSelectedTabEvent)="updateIsModalOpenAndSelectedTab($event)"></app-left-menu>
 </div>
