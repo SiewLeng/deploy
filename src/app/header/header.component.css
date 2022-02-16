@@ -90,9 +90,9 @@ img.logo-img {
     padding: 8px 20px;
     font-size: 18px;
     font-weight: bold;
-    border: 2px solid grey;
+    border: 2px solid red;
     border-radius: 5px;
-    background-color: transparent;
+    background-color: white;
     cursor: pointer;
   }
 }
